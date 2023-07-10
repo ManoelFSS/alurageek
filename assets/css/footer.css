@@ -58,15 +58,17 @@ form label {
     cursor: pointer;
 }
 
-form #nome, form #nome:focus, form #nome:active{
+form #nome, form #cel{
     background-color: #000000;
     border: none;
     border-bottom: solid 2px #528cda;
-    height: 30px;
+    height: 40px;
     width: 100%;
     margin-bottom: 10px;
     color: #fff;
     outline: none;
+    user-select: none;
+    font-size: 1rem;
 } 
 
 form #nome::selection{
