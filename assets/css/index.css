@@ -1,0 +1,8 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+};

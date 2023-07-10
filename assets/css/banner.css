@@ -1,0 +1,143 @@
+.banner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: calc(100vh );
+    position: relative;
+    background-color: #000;
+}
+
+@keyframes anima {
+    0%{
+        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center   / 100% 100%;
+    }
+    10%{
+        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center   / 100% 100%;
+    }
+    20%{
+        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center  / 100%100% ;
+    }
+    30%{
+        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed  center   /100% 100% ;
+    }
+    35%{
+        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat  fixed center   / 100% 100% ;
+    }
+    45%{
+        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed center   / 100% 100% ;
+    }
+    55%{
+        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center   / 100% 100% ;
+    }
+    65%{
+        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center    / 100% 100% ;
+    }
+    70%{
+        background: #000 url(../images/xbox.jpg) no-repeat fixed  center  /100% 100%;
+    }
+    85%{
+        background:#000 url(../images/xbox.jpg) no-repeat  fixed center   / 100% 100%;
+    }
+    100%{
+        background: #000 url(../images/xbox.jpg) no-repeat fixed  center   / 100% 100%;
+    }
+}
+
+
+
+.banner_container{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(100vh);
+    background-color: black;
+    animation: anima 10s  linear infinite;
+
+}
+
+.banner_container_text_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000005e;
+}
+
+.banner_container_text_area div{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+
+.banner_container_text_area h3, 
+.banner_container_text_area p, 
+.banner_container_text_area a {
+    color: #fff;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+
+.banner_container_text_area h3{
+    font-size: 2.5rem;
+    text-shadow: 1px 2px 4px #000;
+}
+
+.banner_container_text_area p{
+    font-size: 1rem;
+    text-shadow: 1px 2px 4px #000;
+}
+
+.banner_container_text_area a {
+    display:flex;
+    height: 40px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #ffffff;
+    cursor:pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.banner_container_text_area a:hover{
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 1px 2px 10px rgb(27, 27, 27);
+    font-weight: bolder;
+}
+
+
+@media (min-width:662px) and (max-width:662px){
+    .banner, 
+    .banner_container,
+    .banner_container_text_area {
+        height: 170vh;
+    }
+    
+}
+
+
+@media (max-width:580px){
+  
+    .banner_container_text_area{
+        margin-left:0px;
+        width: 100%;
+        padding: 10px;
+   
+    }
+
+    .banner_container_text_area h3{
+        font-size: 1.8rem;
+    } 
+    .banner_container_text_area p{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:430px){
+    .banner_container_text_area{
+        justify-content: flex-end;
+    }
+}

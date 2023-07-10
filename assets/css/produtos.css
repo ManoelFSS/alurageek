@@ -1,0 +1,21 @@
+.container_produtos{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+  background-color:  rgb(255, 255, 255);
+}
+
+.produto_title{
+    padding: 0px 0px 30px;
+  
+}
+
+.area_produtos{
+  width: 96%;
+
+}
+
+.produtos{
+    width: 100% ;
+    padding: 30px 0px;
+}

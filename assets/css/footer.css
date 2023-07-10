@@ -1,0 +1,164 @@
+footer {
+    display: flex;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    background-color: #000000;
+}
+
+.footer_area{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.area_logo_footer{
+    padding-right: 40px;
+}
+
+.footer_area .sub_menu {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.footer_area .sub_menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.footer_area .sub_menu a {
+   text-decoration: none;
+   color: #528cda;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form .form_area{
+    width: 100%;
+    min-width: 300px;
+}
+
+form h3 {
+    color: #528cda;
+    padding-bottom: 10px;
+}
+
+form label {
+    display: block;
+    color: #528cda;
+    cursor: pointer;
+}
+
+form #nome, form #nome:focus, form #nome:active{
+    background-color: #000000;
+    border: none;
+    border-bottom: solid 2px #528cda;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fff;
+    outline: none;
+} 
+
+form #nome::selection{
+    box-shadow: 0 0 0 30px rgb(0, 0, 0) inset;
+    caret-color: rgb(104, 95, 95); 
+
+}
+
+form textarea {
+    background-color: #000000;
+    border: none;
+    width: 100%;
+    border-bottom: solid 2px #528cda;
+    color: #fff;
+}
+
+ textarea::placeholder{
+    padding:20px 0px;
+}
+
+form #btn_contato {
+    display:flex;
+    height: 40px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color:#397fdb;
+    cursor:pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-top: 20px;
+    color:#fff;
+    font-weight: bolder;
+}
+
+form #btn_contato:hover {
+    background-color: #003d8d;
+    box-shadow: 1px 2px 10px rgb(27, 27, 27);
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 10px 20px;
+}
+.copyright p {
+    font-size: 1rem;
+    color: #3b3b3b;
+}
+
+
+
+@media (max-width:1257px){
+    .footer_area .sub_menu {
+        width: 50%;
+    }
+}
+
+@media (max-width:1025px){
+    .footer_area .sub_menu {
+        justify-content: flex-start;
+        min-width: 200px;
+    }
+}
+
+
+@media (max-width:719px) {
+    .footer_area{
+        justify-content: center;
+    }
+    .area_logo_footer{
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+    }
+    .footer_area .sub_menu {
+        justify-content: center;
+    }
+
+    .footer_area .sub_menu ul {
+        align-items: center;
+    }
+
+    .area_logo_footer{
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 599px){
+    .form_area{
+        padding: 20px ;
+    }
+}
