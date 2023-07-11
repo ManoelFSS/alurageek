@@ -3,19 +3,32 @@
    justify-content: center;
    width: 100%;
   background-color:  rgb(255, 255, 255);
+  
 }
 
 .produto_title{
-    padding: 30px 0px 30px;
-  
+    padding: 10px 20px;
+}
+
+.produto_title h3{
+  display:inline-block;
+  font-weight:bolder;
+  font-size: 1.5rem;
+  border-bottom: solid 4px #1d559e;
 }
 
 .area_produtos{
   width: 96%;
-
 }
 
 .produtos{
     width: 100% ;
-    padding: 30px 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+#consoles_cards, #games_cards, #acessorios_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
