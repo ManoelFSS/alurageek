@@ -2,7 +2,7 @@
  
  async function fazerRequisicao() {
     try {
-      const resposta = await fetch('https://raw.githubusercontent.com/ManoelFSS/alurageek/main/db.json');
+      const resposta = await fetch('http://localhost:3000/produtos');
       
       if (!resposta.ok) {
         throw new Error('Erro na requisição: ' + resposta.status);
