@@ -1,3 +1,4 @@
+
 {
     "produtos": [
       {
@@ -74,9 +75,9 @@
         },
         {
           "id": 10,
-          "image": "https://global.cdn.magazord.com.br/gamemania/img/2023/06/produto/3304/jogo-street-fighter-6-ps5-b.jpg?ims=600x600",
-          "nome": "Street Fighter",
-          "descricao": "PlayStation 5",
+          "image": "https://i.ytimg.com/vi/IofOy-R9pAI/hqdefault.jpg",
+          "nome": "Super bomberman 4",
+          "descricao": "Nitendo",
           "preco": 95.00,
           "categoria_id": "games"
         },
