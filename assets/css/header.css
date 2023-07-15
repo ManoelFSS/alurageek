@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     background-color: #fff;
     border-bottom: solid 3px #000000;
+  
 }
 
 .area_logo{
@@ -110,6 +111,7 @@ header {
     cursor:pointer;
     text-decoration: none;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .header_container .Login:hover{
