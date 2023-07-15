@@ -11,7 +11,7 @@ async function fazerRequisicao() {
       
       const data = await response.json();
       localStorage.setItem('db_produtos', JSON.stringify(data)) ?? [];
-   
+      atualiza_produtos()
       
     } catch (error) {
       console.error(error);
@@ -38,9 +38,14 @@ const games_cards = document.querySelector('#games_cards')
 const acessorios_cards = document.querySelector('#acessorios_cards')
 
 // chamada da funçao hendle_produtos
-hendle_produtos(filtrarPorNomeOuCategoria('consoles'), consoles_cards)
-hendle_produtos(filtrarPorNomeOuCategoria('games'), games_cards )
-hendle_produtos(filtrarPorNomeOuCategoria('acessorios'), acessorios_cards)
+
+const atualiza_produtos = () =>{
+  hendle_produtos(filtrarPorNomeOuCategoria('consoles'), consoles_cards)
+  hendle_produtos(filtrarPorNomeOuCategoria('games'), games_cards )
+  hendle_produtos(filtrarPorNomeOuCategoria('acessorios'), acessorios_cards)
+}
+
+
   
 // funçao geradora de cards
 
