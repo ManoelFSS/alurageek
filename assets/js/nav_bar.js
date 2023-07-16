@@ -55,7 +55,7 @@ menu.forEach((e)=>{
         var menu = document.querySelector(".header_container").offsetHeight;
         var menu_nav = document.querySelector("header nav").offsetHeight;
 
-        if (e.innerHTML === "Consoles" || e.innerHTML === "Games" || e.innerHTML === "Acessorios" || e.innerHTML === "Contato") {
+        if (e.innerHTML === "consoles" || e.innerHTML === "games" || e.innerHTML === "acessorios" || e.innerHTML === "contato") {
           var section = document.getElementById(e.innerHTML);
           var offsetTop = section.offsetTop - (menu + menu_nav);
           window.scrollTo({ top: offsetTop, behavior: 'smooth' });

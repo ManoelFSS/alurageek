@@ -2,8 +2,7 @@
    display: flex;
    justify-content: center;
    width: 100%;
-  background-color:  rgb(255, 255, 255);
-  
+   background-color:  rgb(255, 255, 255);
 }
 
 .produto_title{
@@ -14,11 +13,13 @@
   display:inline-block;
   font-weight:bolder;
   font-size: 1.5rem;
+  text-transform: capitalize;
   border-bottom: solid 4px #1d559e;
 }
 
 .area_produtos{
   width: 96%;
+  padding-bottom: 20px;
 }
 
 .produtos{
@@ -29,7 +30,7 @@
 #consoles_cards, #games_cards, #acessorios_cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   
 }

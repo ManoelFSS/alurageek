@@ -11,7 +11,7 @@ async function fazerRequisicao() {
       
       const data = await response.json();
 
-      console.log(data)
+     
       localStorage.setItem('db_produtos', JSON.stringify(data)) ?? [];   
        
     } catch (error) {

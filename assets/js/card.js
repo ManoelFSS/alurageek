@@ -1,8 +1,54 @@
+function teste (secao){
+
+    const area_produtos = document.querySelector('.area_produtos')
+    const area_card = document.createElement('div')
+    area_card.innerHTML = `
+        <section class="produtoss" id="${secao}">
+            <div class="produto_title">
+                <h3>${secao}</h3>
+            </div>
+            <div id="${secao}_cards">
+                
+            </div>
+        </section>
+    `;
+    
+    // add um filho no container area_produtos
+    area_produtos.appendChild(area_card);   
+    // pegando a seçao especifica passada por parametro
+    const secao_cards = document.querySelector(`#${secao}_cards`)
+    // chamada da funçao hendle_produtos
+    const atualiza_produtos = () =>{
+        hendle_produtos(filtrarPorNomeOuCategoria(secao), secao_cards)
+    }
+
+    setTimeout(atualiza_produtos, 100)
+
+}
+
+
+// pegando os dados do localStorage
+const respostalocalStorage = JSON.parse(localStorage.getItem("db_produtos")); 
+
+// pegando dados das categorias 
+const categorias = respostalocalStorage.categorias.map(e => e.nome)
+// passando os dados das categorias para a funçao teste assim rederizando as seçoes
+for(let i = 0; i < categorias.length; i++){
+    teste(categorias[i])
+}
+
+
+
+
+// chama a funçao  atualiza_produtos apois o carregamento da pagina assim garantindo que os cards sejam rederizados
+
+
+
 
 // funçao filter categorias
 function filtrarPorNomeOuCategoria(categoria) {
-    
-    const respostalocalStorage = JSON.parse(localStorage.getItem("db_produtos")); 
+
+   
     
     return respostalocalStorage.produtos.filter(produto => {
     // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
@@ -12,24 +58,12 @@ function filtrarPorNomeOuCategoria(categoria) {
 
 }
 
-const consoles_cards = document.querySelector('#consoles_cards')
-const games_cards = document.querySelector('#games_cards')
-const acessorios_cards = document.querySelector('#acessorios_cards')
 
-// chamada da funçao hendle_produtos
-
-const atualiza_produtos = () =>{
-  hendle_produtos(filtrarPorNomeOuCategoria('consoles'), consoles_cards)
-  hendle_produtos(filtrarPorNomeOuCategoria('games'), games_cards )
-  hendle_produtos(filtrarPorNomeOuCategoria('acessorios'), acessorios_cards)
-}
-
-// chama a funçao  atualiza_produtos apois o carregamento da pagina assim garantindo que os cards sejam rederizados
-setTimeout(atualiza_produtos, 100)
   
 // funçao geradora de cards
 
 function geraCard (e, secao){
+    
 
 const card = document.createElement('div')
 card.innerHTML = `

@@ -39,6 +39,7 @@ nav ul li a{
     font-size: 1rem;
     transition: all 0.3s;
     font-weight: 900;
+    text-transform: capitalize;
 }
 
 nav ul li a:hover, .nav_bar_ativo{
