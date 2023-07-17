@@ -4,11 +4,11 @@ nav{
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #274790;
     position: fixed;
     gap: 30px;
     flex-wrap: wrap;
-    padding: 0px 30px;
+    padding: 10px 30px 5px;
     top: 55px;
     z-index: 2;
     transition: all 1s;
@@ -35,15 +35,15 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
+    color: #000000;
+    font-size: 1.2rem;
     transition: all 0.3s;
     font-weight: 900;
     text-transform: capitalize;
 }
 
 nav ul li a:hover, .nav_bar_ativo{
-    color:#2A7AE4;
+    color:#ffffff;
 }
 
 @media (max-width:435px){
@@ -58,6 +58,6 @@ nav ul li a:hover, .nav_bar_ativo{
 
 @media (max-width:390px){
     nav ul li a{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }

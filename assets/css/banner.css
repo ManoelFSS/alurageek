@@ -4,42 +4,42 @@
     align-items: center;
     height: calc(100vh );
     position: relative;
-    background-color: #000;
+    background-color: #ffffff;
 }
 
 @keyframes anima {
     0%{
-        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center   / 100% 70%;
+        background:#000000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center 200px  / 100% 60%;
     }
     10%{
-        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center   / 100% 70%;
+        background:#000000  url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center 200px  / 100% 60%;
     }
     20%{
-        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center  / 100% 70% ;
+        background:#000000  url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed center 200px / 100% 60% ;
     }
     30%{
-        background:#000 url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed  center   /100% 70% ;
+        background:#000000  url(https://1.bp.blogspot.com/-je8JbatZF8I/XIhQZ3s9ZMI/AAAAAAAAOec/d2sJAdqMpV4FcyI7b81sjCHIXHoG46avgCLcBGAs/s1600/nintendo-nao-vai-falir-switch-3ds-playreplay.jpg) no-repeat fixed  center 200px  /100% 60% ;
     }
     35%{
-        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat  fixed center   / 100% 70% ;
+        background:#000000  url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat  fixed center 200px  / 100% 60% ;
     }
     45%{
-        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed center   / 100% 70% ;
+        background:#000000  url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed center 200px  / 100% 60% ;
     }
     55%{
-        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center   / 100% 70% ;
+        background:#000000  url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center 200px  / 100% 60% ;
     }
     65%{
-        background:#000 url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center    / 100% 70% ;
+        background:#000000  url(https://canoticias.pt/wp-content/uploads/2023/05/promocoes-playstation-5-passatempo-habilita-te-a-ganhar-uma-consola-ps5-2.jpg) no-repeat fixed  center 200px   / 100% 60% ;
     }
     70%{
-        background: #000 url(../images/xbox.jpg) no-repeat fixed  center  /100% 70%;
+        background: #000000  url(../images/xbox.jpg) no-repeat fixed  center 200px /100% 60%;
     }
     85%{
-        background:#000 url(../images/xbox.jpg) no-repeat  fixed center   / 100% 70%;
+        background:#000000  url(../images/xbox.jpg) no-repeat  fixed center  200px / 100% 60%;
     }
     100%{
-        background: #000 url(../images/xbox.jpg) no-repeat fixed  center   / 100% 70%;
+        background: #000000  url(../images/xbox.jpg) no-repeat fixed  center 200px  / 100% 60%;
     }
 }
 
