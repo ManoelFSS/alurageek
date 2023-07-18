@@ -1,4 +1,4 @@
-function teste (secao){
+function container_produtos (secao){
 
     const area_produtos = document.querySelector('.area_produtos')
     const area_card = document.createElement('div')
@@ -32,9 +32,9 @@ const respostalocalStorage = JSON.parse(localStorage.getItem("db_produtos"));
 
 // pegando dados das categorias 
 const categorias = respostalocalStorage.categorias.map(e => e.nome)
-// passando os dados das categorias para a funçao teste assim rederizando as seçoes
+// passando os dados das categorias para a funçao container_produtos assim rederizando as seçoes
 for(let i = 0; i < categorias.length; i++){
-    teste(categorias[i])
+    container_produtos(categorias[i])
 }
 
 

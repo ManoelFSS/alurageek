@@ -3,16 +3,62 @@
 
 const getLocalStore = () => JSON.parse(localStorage.getItem('db_produtos')) ?? [];
 const setLocalStore = (db_Cliente) => localStorage.setItem('db_produtos', JSON.stringify(db_Cliente));
-console.log(getLocalStore())
 const LerturaClientes = () => getLocalStore();
 
-const createCliente = (clientes) => {
-    const db_Cliente = getLocalStore();
-    db_Cliente.push(clientes);
-    setLocalStore(db_Cliente);
-};
 
-createCliente()
+
+const hendle_produtos = (e)=>{
+    const container_produtos = document.querySelector('.container_produtos')
+    const card = document.createElement('div');
+    card.innerHTML = `
+        <div class="card">
+            <div>
+                <img src="${e.image}" alt="ps5">
+            </div>
+            <div class="card_text_area">
+                <h3 class="title_card">${e.nome}</h3>
+                <p class="descricao_card"> ${e.descricao}</p>
+                <p class="prace_card">R$ ${e.preco.toFixed(2)} reais</p>
+            </div>
+        </div>
+    `;
+
+    container_produtos.appendChild(card)
+}
+
+
+function filtrarPorNomeOuCategoria(categoria) {
+    const data_produtos = getLocalStore()
+    return data_produtos.produtos.filter(produto => {
+    // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
+    const categoriaCorresponde = categoria ? produto.nome.toLowerCase().startsWith(categoria.toLowerCase()) : produto;
+    console.log(categoriaCorresponde)
+    return categoriaCorresponde;
+  });
+
+}
+
+
+const map_card = (e) =>{
+  console.log(e)
+   e.map((e)=> {
+        hendle_produtos(e)
+   })
+}
+let input_pesquisa = ''
+
+const pesquisa = document.querySelector("#pesquisa")
+pesquisa.addEventListener('click', ()=>{
+    event.preventDefault();
+    const campo_pesqisa = document.querySelector("#campo_pesqisa").value
+    input_pesquisa = campo_pesqisa;
+
+})
+console.log(input_pesquisa)
+map_card(filtrarPorNomeOuCategoria(input_pesquisa));
+
+
+
 
 
 // const deleteCliente = (index) =>{

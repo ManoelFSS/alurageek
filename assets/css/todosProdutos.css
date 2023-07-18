@@ -1,10 +1,8 @@
-main{
-    height: 100vh;
-}
 
 .container_produtos{
-    border:solid 2px red;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 30px;
 }
 
@@ -12,7 +10,6 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border:solid 2px red;
     height:60px;
     margin-top: 60px;
     color:black;
