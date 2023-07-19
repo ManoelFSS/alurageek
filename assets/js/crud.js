@@ -26,40 +26,42 @@ const hendle_produtos = (e)=>{
     container_produtos.appendChild(card)
 }
 
-
 function filtrarPorNomeOuCategoria(categoria) {
-    const data_produtos = getLocalStore()
-    return data_produtos.produtos.filter(produto => {
-    // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
-    const categoriaCorresponde = categoria ? produto.nome.toLowerCase().startsWith(categoria.toLowerCase()) : produto;
-    console.log(categoriaCorresponde)
-    return categoriaCorresponde;
-  });
-
+    const data_produtos = getLocalStore();
+  
+    // Check if the category filter is specified
+    if (categoria) {
+        
+        return data_produtos.produtos.filter(produto => {
+          
+            // Verifies if the name or category of the product corresponds to the filter criteria
+            const categoriaCorresponde = produto.nome.toLowerCase().startsWith(categoria.toLowerCase());
+    
+            return categoriaCorresponde;
+            
+        });
+    } else {
+        // If no category filter is specified, return all products
+        return data_produtos.produtos;
+        
+    }
+   
 }
+
+
 
 
 const map_card = (e) =>{
-  console.log(e)
+
    e.map((e)=> {
         hendle_produtos(e)
    })
+
 }
-let input_pesquisa = ''
 
-const pesquisa = document.querySelector("#pesquisa")
-pesquisa.addEventListener('click', ()=>{
-    event.preventDefault();
-    const campo_pesqisa = document.querySelector("#campo_pesqisa").value
-    input_pesquisa = campo_pesqisa;
+map_card(filtrarPorNomeOuCategoria(document.querySelector("#inpt_pesqisa").value));
 
-})
-console.log(input_pesquisa)
-map_card(filtrarPorNomeOuCategoria(input_pesquisa));
-
-
-
-
+// setTimeout(()=>{}, 100)
 
 // const deleteCliente = (index) =>{
 //     const db_Cliente = LerturaClientes();
