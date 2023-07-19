@@ -1,6 +1,6 @@
 let local = JSON.parse(localStorage.getItem('db_produtos'))
 
-console.log(local)
+console.log(local.produtos.length)
 
 if(local === null || local.produtos.length <= 0){
     async function fazerRequisicao() {
@@ -27,3 +27,10 @@ if(local === null || local.produtos.length <= 0){
    
 }
 
+if(local.produtos.length === 0){
+  console.log('else')
+  setTimeout(()=>{
+    window.location.reload();
+  },200)
+  
+}
