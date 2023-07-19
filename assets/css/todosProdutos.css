@@ -1,4 +1,6 @@
-
+.card{
+    position: relative;
+}
 .container_produtos{
     display: flex;
     justify-content: center;
@@ -15,4 +17,34 @@
     margin-top: 60px;
     color:black;
     padding: 0px 30px;
+}
+.card img {
+    position: relative;
+    z-index: 0;
+}
+
+.area_btns{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.excluir, .editar{
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.excluir {
+    background: url(https://png.pngtree.com/png-vector/20190420/ourmid/pngtree-delete-vector-icon-png-image_963444.jpg) no-repeat center / cover;
+}
+
+.editar{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtnmfBuli2S1ZufcttHK7JWzNaIQCPxW2Pw&usqp=CAU) no-repeat center / cover;
 }

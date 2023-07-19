@@ -48,8 +48,6 @@ for(let i = 0; i < categorias.length; i++){
 // funçao filter categorias
 function filtrarPorNomeOuCategoria(categoria) {
 
-   
-    
     return respostalocalStorage.produtos.filter(produto => {
     // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
     const categoriaCorresponde = categoria ? produto.categoria_id === categoria : true;
