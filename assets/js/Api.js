@@ -29,6 +29,6 @@ if(local.produtos.length === 0){
   console.log('else')
   setTimeout(()=>{
     window.location.reload();
-  },3000)
+  },1000)
   
 }

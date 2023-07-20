@@ -1,4 +1,4 @@
-function container_produtos (secao){
+function container_produtos(secao) {
 
     const area_produtos = document.querySelector('.area_produtos')
     const area_card = document.createElement('div')
@@ -12,13 +12,15 @@ function container_produtos (secao){
             </div>
         </section>
     `;
-    
+
     // add um filho no container area_produtos
-    area_produtos.appendChild(area_card);   
+    area_produtos.appendChild(area_card);
+
     // pegando a seçao especifica passada por parametro
     const secao_cards = document.querySelector(`#${secao}_cards`)
+
     // chamada da funçao hendle_produtos
-    const atualiza_produtos = () =>{
+    const atualiza_produtos = () => {
         hendle_produtos(filtrarPorNomeOuCategoria(secao), secao_cards)
     }
 
@@ -28,43 +30,34 @@ function container_produtos (secao){
 
 
 // pegando os dados do localStorage
-const respostalocalStorage = JSON.parse(localStorage.getItem("db_produtos")); 
+const respostalocalStorage = JSON.parse(localStorage.getItem("db_produtos"));
 
 // pegando dados das categorias 
 const categorias = respostalocalStorage.categorias.map(e => e.nome)
+
 // passando os dados das categorias para a funçao container_produtos assim rederizando as seçoes
-for(let i = 0; i < categorias.length; i++){
+for (let i = 0; i < categorias.length; i++) {
     container_produtos(categorias[i])
 }
-
-
-
-
-// chama a funçao  atualiza_produtos apois o carregamento da pagina assim garantindo que os cards sejam rederizados
-
-
 
 
 // funçao filter categorias
 function filtrarPorNomeOuCategoria(categoria) {
 
     return respostalocalStorage.produtos.filter(produto => {
-    // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
-    const categoriaCorresponde = categoria ? produto.categoria_id === categoria : true;
-    return categoriaCorresponde;
-  });
+        // Verifica se o nome do produto ou categoria do produto correspondem aos critérios de filtro
+        const categoriaCorresponde = categoria ? produto.categoria_id === categoria : true;
+        return categoriaCorresponde;
+    });
 
 }
 
-
-  
 // funçao geradora de cards
 
-function geraCard (e, secao){
-    
+function geraCard(e, secao) {
 
-const card = document.createElement('div')
-card.innerHTML = `
+    const card = document.createElement('div')
+    card.innerHTML = `
     <div class="card">
         <div>
             <img src="${e.image}" alt="ps5">
@@ -80,15 +73,15 @@ card.innerHTML = `
     </div>
 `;
 
-secao.appendChild(card);
+    secao.appendChild(card);
 
 }
 
 
 // rederizando e mapeando  items do array
-function hendle_produtos(e, secao){
-    
-    e.slice(0,6).map((e)=>{
+function hendle_produtos(e, secao) {
+
+    e.slice(0, 6).map((e) => {
         geraCard(e, secao);
     })
 }
