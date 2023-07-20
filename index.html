@@ -97,8 +97,8 @@
                 </div>
                 <div>
                     <label for="cel">Celular</label>
-                    <input type="tel" placeholder="(dd)9xxxx-xxxx" id="cel"  autocomplete="off" required
-                    pattern="\(\d{2}\) \d{5}-\d{4}" title="Formato aceito Ex: (dd)9xxxx-xxxx" minlength="14" maxlength="14">
+                    <input type="text" placeholder="(dd)9xxxx-xxxx" id="cel"  autocomplete="off" required
+                    pattern="^\(\d{2}\)\d{5}-\d{4}$" title="Formato aceito Ex: (dd)9xxxx-xxxx" minlength="14" maxlength="14">
                 </div>
                 <div>
                     <textarea name="mensagem" id="" cols="40" rows="4" placeholder="Escreva sua mensagem"></textarea>
