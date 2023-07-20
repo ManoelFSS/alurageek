@@ -30,12 +30,28 @@
        <section class="area_todos_produtos">
             <section class="area_btn_add">
                 <h3>Todos os produtos</h3>
-                <a href="#">Adicionar produto</a>
+                <a href="#" class="add_produtos">Adicionar produto</a>
             </section>
             <section class="container_produtos">
 
             </section>
        </section>
+       <section class="editar_form">
+            <div class="container_edit_form">
+                <div class="header_edit">
+                    <h3>Adicionar novo produto</h3>
+                    <span id="fechar">X</span>
+                </div>
+                <input type="text" id="image" placeholder="Url">
+                <input type="text" id="categoria_id" placeholder="Categoria">
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="number" id="preco" placeholder="Preço">
+                <input type="text" id="descricao" placeholder="Descrição">
+                <!-- Adicione um campo oculto para armazenar o índice do produto sendo editado -->
+                <input type="hidden" id="indice-edicao" value="">
+                <button id="salvar" onclick="salvarEdicao()">Adicionar produto</button>
+            </div>
+      </section>
     </main>
     <footer>
         <section class="footer_area">

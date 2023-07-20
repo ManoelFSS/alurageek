@@ -84,9 +84,139 @@ function excluir(index){
      window.location.reload();
 }
 
+function editar(index){
+    
+   
+  let item =  lista[0].produtos[index]
+    
+  // Preencha os campos do formulário com os dados do produto selecionado para edição
+  document.getElementById('image').value = item.image;
+  document.getElementById('nome').value = item.nome;
+  document.getElementById('descricao').value = item.descricao;
+  document.getElementById('preco').value = item.preco;
+  document.getElementById('categoria_id').value = item.categoria_id;
+  // Preencha outros campos conforme necessário
+
+  // Guarde o índice do produto sendo editado para uso posterior (pode ser útil ao salvar as alterações)
+  document.getElementById('indice-edicao').value = index;
+  modal_abrir()
+}
+
 function reload(){
     map_card(filtrarPorNomeOuCategoria())
-   
+  
 }
 reload()
+
+const add_produtos = document.querySelector('.add_produtos')
+const editar_form = document.querySelector('.editar_form')
+const fechar = document.querySelector('#fechar')
+
+function modal_abrir(){
+    editar_form.style.display = 'flex'
+}
+
+function modal_fechar(){
+    editar_form.style.display = 'none'
+}
+
+
+
+
+function salvarEdicao() {
+    const index = parseInt(document.getElementById('indice-edicao').value);
+    const image = document.getElementById('image').value;
+    const nome = document.getElementById('nome').value;
+    const descricao = document.getElementById('descricao').value;
+    const preco = parseFloat(document.getElementById('preco').value);
+    const categoria = document.getElementById('categoria_id').value;
+ 
+  
+    // Faça as validações necessárias antes de atualizar o produto
+    if (nome.trim() === ''  || image.trim() === '' || categoria.trim() === '' || descricao.trim() === '' || isNaN(preco) || preco <= 0) {
+      alert('Por favor, preencha os campos corretamente.');
+      return;
+    }
+
+    const novoProduto = {
+        image:image,
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        categoria_id:categoria
+        // Outros campos do novo produto, se houver
+      };
+
+      const novaCategoria = {
+    
+        id: 1,
+        nome: categoria
+        
+      }
+    
+      if (Number.isInteger(index)) {
+        // Se o índice for um número, significa que estamos editando um produto existente
+        lista[0].produtos[index] = novoProduto;
+        lista[0].categorias[index] = novaCategoria;
+      } else {
+        // Caso contrário, estaremos adicionando um novo produto à lista
+        lista[0].produtos.push(novoProduto);
+        lista[0].categorias.push(novaCategoria);
+      }
+  
+    // Atualize os dados do produto no LocalStorage
+    // lista[0].produtos[index].image = image;
+    // lista[0].produtos[index].nome = nome;
+    // lista[0].produtos[index].descricao = descricao;
+    // lista[0].produtos[index].preco = preco;
+    // lista[0].produtos[index].categoria_id = categoria;
+  
+    localStorage.setItem('db_produtos', JSON.stringify(lista[0]));
+  
+    // Recarregue a lista de produtos após a edição
+    reload();
+    modal_fechar()
+    window.location.reload();
+  }
+
+
+  function adicionarNovo() {
+    salvarProduto(-1);
+  
+    // Limpe os campos do formulário após adicionar o novo produto
+   document.getElementById('image').value = '';
+   document.getElementById('nome').value = '';
+   document.getElementById('descricao').value = '';
+   document.getElementById('preco').value;
+   document.getElementById('categoria_id').value = '';
+    // Limpe outros campos do formulário, se houver
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//events
+
+add_produtos.addEventListener('click', ()=>{
+    modal_abrir()
+})
+
+fechar.addEventListener('click', ()=>{
+    modal_fechar()
+})
 
