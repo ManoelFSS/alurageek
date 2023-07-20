@@ -76,8 +76,7 @@ const map_card = (e) =>{
 
 function excluir(index){
     lista[0].produtos.splice(index,1)
-    console.log(lista)
-    
+   
      localStorage.setItem('db_produtos', JSON.stringify(lista[0]))
     
      reload()
@@ -164,12 +163,7 @@ function salvarEdicao() {
         lista[0].categorias.push(novaCategoria);
       }
   
-    // Atualize os dados do produto no LocalStorage
-    // lista[0].produtos[index].image = image;
-    // lista[0].produtos[index].nome = nome;
-    // lista[0].produtos[index].descricao = descricao;
-    // lista[0].produtos[index].preco = preco;
-    // lista[0].produtos[index].categoria_id = categoria;
+   
   
     localStorage.setItem('db_produtos', JSON.stringify(lista[0]));
   
@@ -182,30 +176,19 @@ function salvarEdicao() {
 
   function adicionarNovo() {
     salvarProduto(-1);
+    limpa_inputs()
+
+  }
   
+
+const limpa_inputs = ()=> {
     // Limpe os campos do formulário após adicionar o novo produto
    document.getElementById('image').value = '';
    document.getElementById('nome').value = '';
    document.getElementById('descricao').value = '';
    document.getElementById('preco').value;
    document.getElementById('categoria_id').value = '';
-    // Limpe outros campos do formulário, se houver
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -214,9 +197,11 @@ function salvarEdicao() {
 
 add_produtos.addEventListener('click', ()=>{
     modal_abrir()
+    limpa_inputs()
 })
 
 fechar.addEventListener('click', ()=>{
     modal_fechar()
+    limpa_inputs()
 })
 
