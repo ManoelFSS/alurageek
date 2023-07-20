@@ -6,7 +6,7 @@ const setLocalStore = (db_Cliente) => localStorage.setItem('db_produtos', JSON.s
 const LerturaClientes = () => getLocalStore();
 
 
-let lista = [LerturaClientes()]
+let lista = LerturaClientes()
 
 console.log(lista)
 
@@ -69,12 +69,9 @@ const map_card = (e) => {
 
 
 function excluir(index) {
-    lista[0].produtos.splice(index, 1)
-
-    localStorage.setItem('db_produtos', JSON.stringify(lista[0]))
-
-    reload()
-    window.location.reload();
+    lista = getLocalStore()
+    lista.produtos.splice(index, 1)
+    localStorage.setItem('db_produtos', JSON.stringify(lista))
 }
 
 function editar(index) {
@@ -91,11 +88,12 @@ function editar(index) {
     // Guarda o índice do produto sendo editado para uso posterior (pode ser útil ao salvar as alterações)
     document.getElementById('indice-edicao').value = index;
     modal_abrir()
+   
 }
 
 function reload() {
     map_card(filtrarPorNomeOuCategoria())
-
+   
 }
 reload()
 
@@ -103,6 +101,15 @@ const add_produtos = document.querySelector('.add_produtos')
 const editar_form = document.querySelector('.editar_form')
 const fechar = document.querySelector('#fechar')
 const area_todos_produtos = document.querySelector('.area_todos_produtos')
+const btn_delet = document.querySelectorAll('.excluir')
+
+btn_delet.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+       
+        window.location.reload()
+    
+    })
+})
 
 function modal_abrir() {
     editar_form.style.display = 'flex'
@@ -150,17 +157,17 @@ function salvarEdicao() {
 
     if (Number.isInteger(index)) {
         // Se o índice for um número, significa que estamos editando um produto existente
-        lista[0].produtos[index] = novoProduto;
-        lista[0].categorias[index] = novaCategoria;
+        lista.produtos[index] = novoProduto;
+        lista.categorias[index] = novaCategoria;
     } else {
         // Caso contrário, estaremos adicionando um novo produto à lista
-        lista[0].produtos.push(novoProduto);
-        lista[0].categorias.push(novaCategoria);
+        lista.produtos.push(novoProduto);
+        lista.categorias.push(novaCategoria);
     }
 
 
 
-    localStorage.setItem('db_produtos', JSON.stringify(lista[0]));
+    localStorage.setItem('db_produtos', JSON.stringify(lista0));
 
     // Recarregue a lista de produtos após a edição
     reload();
